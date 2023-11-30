@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+                                <!-- /ENCABEZADO/ -->
+    <mat-toolbar-row>
+        <h1>Sistema Venta</h1>
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side" style="width: 250px;">
+        <mat-nav-list>
+
+            <mat-list-item routerLink="/pages/dashboard">
+                <div mat-line>
+                    <mat-icon mat-line-icon>dashboard</mat-icon> DashBoard 
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/usuarios">
+                <div mat-line>
+                    <mat-icon mat-line-icon>group</mat-icon> Usuario 
+                </div>  
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/productos">
+                <div mat-line>
+                    <mat-icon mat-line-icon>collections-bookmark</mat-icon> Productos 
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/venta">
+                <div mat-line>
+                    <mat-icon mat-line-icon>currency_exchange</mat-icon> Venta 
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/historial_venta">
+                <div mat-line>
+                    <mat-icon mat-line-icon>edit-note</mat-icon> Historial Ventas 
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/Reportes">
+                <div mat-line>
+                    <mat-icon mat-line-icon>receipt</mat-icon> Reportes 
+                </div>
+            </mat-list-item>
+<!---->
+
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div style="height: 90vh;">
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
